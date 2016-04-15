@@ -11,10 +11,10 @@ RUN apt-get update && \
 # > At the moment, setting "LANG=C" on a Linux system *fundamentally breaks Python 3*, and that's not OK.
 ENV LANG C.UTF-8
 
-ENV PYTHON_VERSION 3.5.1
+ENV PYTHON_VERSION 3.6.0a0
 
 # if this is called "PIP_VERSION", pip explodes with "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 8.1.0
+ENV PYTHON_PIP_VERSION 8.1.1
 
 RUN set -ex \
 	&& curl -fSL "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz" -o python.tar.xz \
